@@ -1,7 +1,6 @@
-mod part2;
-mod part1;
 pub mod utils;
+mod day1;
 
 fn main() {
-    part2::compute()
+    day1::part2::compute()
 }
