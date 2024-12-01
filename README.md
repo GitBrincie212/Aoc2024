@@ -1,0 +1,1 @@
+This repositery contains all of the solution i divised throughout the 2024 advent of code event. All of them written in rust for the reason to learn the language and have a more fundemental understanding of it
