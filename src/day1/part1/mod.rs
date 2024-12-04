@@ -1,9 +1,10 @@
 use num_bigint::{BigInt, Sign};
 use crate::utils;
+use crate::day1;
 
 pub fn compute() {
-    let contents: String = utils::read_input(1);
-    let (mut left, mut right) = utils::split_in_two(&contents);
+    let contents: String = utils::read_input(1, 1);
+    let (mut left, mut right) = day1::split_in_two(&contents);
 
     left.sort();
     right.sort();
