@@ -5,6 +5,7 @@ pub mod utils;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 fn read_as_str(message: &str) -> String {
     let mut day_str: String = String::from("");
@@ -35,6 +36,7 @@ fn main() {
         ("2", "2") => {day2::part2::compute()}
         ("3", "1") => {day3::part1::compute()}
         ("3", "2") => {day3::part2::compute()}
+        ("4", "1") => {day4::part1::compute()}
         _ => {println!("Invalid input. Couldn't find the combination")}
     }
 }
