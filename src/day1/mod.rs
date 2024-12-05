@@ -4,7 +4,7 @@ use num_bigint::BigInt;
 pub mod part2;
 pub mod part1;
 
-pub fn split_in_two(input: &String) -> (Vec<BigInt>, Vec<BigInt>) {
+fn split_in_two(input: &String) -> (Vec<BigInt>, Vec<BigInt>) {
     let lines: Lines = input.lines();
 
     let line_count: usize = lines.clone().count();

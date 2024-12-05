@@ -7,13 +7,13 @@ pub mod part1;
 pub mod part2;
 
 #[derive(Debug, PartialEq, Clone)]
-pub enum GradualType {
+enum GradualType {
     UNSET,
     INCREASING,
     DECREASING
 }
 
-pub fn set_gradual<'a> (diff: &BigInt) -> Option<&'a GradualType> {
+fn set_gradual<'a> (diff: &BigInt) -> Option<&'a GradualType> {
     if diff > &BigInt::ZERO {
         return Some(&GradualType::INCREASING);
     } else if diff < &BigInt::ZERO {
@@ -22,12 +22,12 @@ pub fn set_gradual<'a> (diff: &BigInt) -> Option<&'a GradualType> {
     None
 }
 
-pub fn gradual_to_bool(diff: &BigInt, gradual_type: &GradualType) -> bool {
+fn gradual_to_bool(diff: &BigInt, gradual_type: &GradualType) -> bool {
     (diff > &BigInt::ZERO && gradual_type == &GradualType::INCREASING) ||
             (diff < &BigInt::ZERO && gradual_type == &GradualType::DECREASING)
 }
 
-pub fn analyse_single_report<'a>(data: &Vec<&str>, mut gradual_type: &GradualType) -> (bool, usize) {
+fn analyse_single_report<'a>(data: &Vec<&str>, mut gradual_type: &GradualType) -> (bool, usize) {
     if data.len() >= 1 {
         let mut prev_entry: BigInt = BigInt::from_str(data[0]).unwrap();
         let mut index: usize = 0;

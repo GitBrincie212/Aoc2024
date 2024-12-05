@@ -3,9 +3,9 @@ use num_bigint::BigInt;
 use regex::{Captures, Regex};
 
 pub mod part1;
-pub(crate) mod part2;
+pub mod part2;
 
-pub fn capture_valid_instructions(input: &str) -> Vec<(BigInt, BigInt, BigInt)> {
+fn capture_valid_instructions(input: &str) -> Vec<(BigInt, BigInt, BigInt)> {
     let regex_pattern: Regex = Regex::new(r"mul\((\d+),(\d+)\)").unwrap();
 
     let vec: Vec<Captures> = regex_pattern.captures_iter(&input).collect();
