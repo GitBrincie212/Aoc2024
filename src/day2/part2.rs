@@ -10,7 +10,7 @@ pub fn compute() {
 }
 
 pub fn parse_data(line: &str, safe_reports: &mut BigInt) {
-    let mut data: Vec<&str> = line.split(" ").collect();
+    let data: Vec<&str> = line.split(" ").collect();
     /*
     Solved it via brute-forcing. Very inefficient as it leads to ~O(n^2), not very happy about it,
     but at least it works. I might retouch on this problem and think of a more clever algorithm
