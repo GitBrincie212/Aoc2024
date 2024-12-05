@@ -4,7 +4,7 @@ use crate::utils;
 use crate::day1;
 
 pub fn compute() {
-    let contents: String = utils::read_input(1, 2);
+    let contents: String = utils::read_input(1);
     let (left, right) = day1::split_in_two(&contents);
     let left_hashset: HashSet<BigInt> = HashSet::from_iter(left.into_iter());
     let mut sum: BigInt = BigInt::ZERO;
